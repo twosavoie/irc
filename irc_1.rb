@@ -1,5 +1,5 @@
 #https://learn.skillcrush.com/module-20/ping-pong/
-
+#I don't know if this branch thing is working or not
 require 'socket'
 
 server = 'irc.freenode.net'
