@@ -14,7 +14,7 @@ channel = '#twos22'
 socket.puts "NICK #{nickname}"
 socket.puts "USER #{nickname} O * #{nickname}"
 socket.puts "JOIN #{channel}"
-socket.puts "PRIVMSG #{channel} :Really?!"
+socket.puts "PRIVMSG #{channel} :Really?!" #irc response when I run script
 
 while message = socket.gets do
   puts message
@@ -23,7 +23,8 @@ while message = socket.gets do
     server = message.split(':').last
     puts "PONG #{server}"
     socket.puts "PONG #{server}"
-  elsif message.match('How are you?')
-    puts "PRIVMSG #{channel} :I'm great, thanks!"
+  elsif message.match('Does this work?') #this has to match what I type into freenode.net
+    puts "PRIVMSG #{channel} :This Works!"
+    socket.puts "PRIVMSG #{channel} :This Works!" #responce to message.match
   end
 end
