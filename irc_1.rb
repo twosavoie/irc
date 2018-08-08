@@ -14,7 +14,7 @@ channel = '#twos22'
 socket.puts "NICK #{nickname}"
 socket.puts "USER #{nickname} O * #{nickname}"
 socket.puts "JOIN #{channel}"
-socket.puts "PRIVMSG #{channel} :This Works!"
+socket.puts "PRIVMSG #{channel} :Really?!"
 
 while message = socket.gets do
   puts message
